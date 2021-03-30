@@ -1,7 +1,7 @@
 <aside class="social">
   {% for socialName, social in metadata.social %}
     {% if social.link !== "" %}
-      <a class="social__icon" href="{{social.link}}">{% include "../.." + social.icon %}</a>
+      <a class="social__icon" target="_blank" href="{{social.link | linkFormat }}">{% include "../.." + social.icon %}</a>
     {% endif %}
   {% endfor %}
 </aside>

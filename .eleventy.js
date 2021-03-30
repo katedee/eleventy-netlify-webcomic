@@ -106,7 +106,6 @@ module.exports = function(eleventyConfig) {
   const Image = require("@11ty/eleventy-img");
 
   async function imageShortcode(src, alt) {
-    console.log('BUILDING THUMBNAILS');
     if(alt === undefined) {
       // You bet we throw an error on missing alt (alt="" works okay)
       throw new Error(`Missing \`alt\` on myImage from: ${src}`);
@@ -123,6 +122,26 @@ module.exports = function(eleventyConfig) {
   }
 
   eleventyConfig.addNunjucksAsyncShortcode("image", imageShortcode);
+
+  function linkFilter(link) {
+    let formattedLink= decodeURIComponent(link);
+    formattedLink = formattedLink.trim().replace(/\s/g, "");
+
+    if(link == "/feed/feed.xml") {
+      return formattedLink;
+    }
+
+    if(/^(:\/\/)/.test(formattedLink)){
+        return `http${formattedLink}`;
+    }
+    if(!/^(f|ht)tps?:\/\//i.test(formattedLink)){
+        return `http://${formattedLink}`;
+    }
+
+    return formattedLink;
+  }
+
+  eleventyConfig.addFilter("linkFormat", linkFilter);
 
   /* Markdown Plugins */
   let markdownIt = require("markdown-it");

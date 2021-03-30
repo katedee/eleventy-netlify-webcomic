@@ -11,8 +11,8 @@
     "id": "megawebcomic.netlify.app"
   },
   "social": {
-    "Website": { 
-      "link": "",
+    "Portfolio": { 
+      "link": "www.example.com",
       "icon": "/static/social-icons/website.svg"
     },
     "Twitter": { 

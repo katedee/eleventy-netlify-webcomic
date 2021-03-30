@@ -16,10 +16,10 @@ collections:
     slug: "{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
     fields: # The fields for each document, usually in front matter
       - { label: "Title", name: "title", widget: "string" }
-      - { label: "Publish Date", name: "date", widget: "datetime" }
+      - { label: "Body", name: "body", widget: "markdown" }
       - { label: "Summary", name: "summary", widget: "text" }
       - { label: "Tags", name: "tags", widget: "list", default: ["post"], hint: separate tags by commas }
-      - { label: "Body", name: "body", widget: "markdown" }
+      - { label: "Publish Date", name: "date", widget: "datetime" }
   # Our pages e.g. About
   - name: "pages"
     label: "Page"
@@ -29,15 +29,15 @@ collections:
     fields:
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Publish Date", name: "date", widget: "datetime" }
-      - { label: "Permalink", name: "permalink", widget: "string" }
       - label: "Navigation" # https://www.11ty.dev/docs/plugins/navigation/
         name: "eleventyNavigation"
         widget: "object"
         fields:
-          - { label: "Key", name: "key", widget: "string" }
           - { label: "Order", name: "order", widget: "number", default: 0 }
           - {label: "Link", name: "url", widget: "text", hint: only fill out for store and portfolio pages}
-      - { label: "Body", name: "body", widget: "markdown" }
+          - { label: "Key", name: "key", widget: "hidden" }
+      - { label: "Body", name: "body", widget: "markdown", required: false }
+      - { label: "Permalink", name: "permalink", widget: "hidden" }
   # Our Comic pages
   - name: Comic Page
     label: webcomic
@@ -46,10 +46,10 @@ collections:
     slug: "{{slug}}"
     fields:
       - { label: Comic Page, name: comicPageUrl, widget: image }
-      - { label: Comic Alt Text/Transcription, name: comicalt, widget: markdown, hint: This is useful text for people who are visually impaired to follow your comic. Check out this post for some tips on how to write accessible transcripts https://lastcallmedia.com/blog/accessible-comics }   
       - { label: 'Title', name: 'title', widget: 'string' }
+      - { label: 'Body', name: 'body', widget: 'markdown', required: false }
+      - { label: Comic Alt Text/Transcription, name: comicalt, widget: markdown, required: false, hint: This is useful text for people who are visually impaired to follow your comic. Check out this post for some tips on how to write accessible transcripts https://lastcallmedia.com/blog/accessible-comics }   
       - { label: 'Publish Date', name: 'date', widget: 'datetime' }
-      - { label: 'Body', name: 'body', widget: 'markdown' }
   # Our Cast Page
   - name: Cast
     label: cast
@@ -58,7 +58,7 @@ collections:
         label: Cast Page
         name: castpage
         fields:
-          - { label: Intro Text, name: body, widget: markdown }
+          - { label: Intro Text, name: body, widget: markdown, required: false }
           - label: Character
             name: characters
             widget: list
