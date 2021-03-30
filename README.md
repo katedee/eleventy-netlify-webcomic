@@ -25,7 +25,7 @@ Anyways, go create your account and then come back here.
 
 Hit this button:
 
-[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/katedee/eleventy-netlify-webcomic&stack=cms)
+[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/katedee/eleventy-netlify-webcomic)
 
 Clicking the button above will deploy a copy of the demo website to your Netlify
 account (you will also create an account during this process)
