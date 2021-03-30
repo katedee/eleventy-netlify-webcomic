@@ -26,38 +26,61 @@ collections:
     folder: "pages"
     create: false # Change to true to allow editors to create new pages
     slug: "{{slug}}"
-    fields:
-      - { label: "Title", name: "title", widget: "string" }
-      - { label: "Publish Date", name: "date", widget: "datetime" }
-      - label: "Navigation" # https://www.11ty.dev/docs/plugins/navigation/
-        name: "eleventyNavigation"
-        widget: "object"
-        fields:
-          - { label: "Order", name: "order", widget: "number", default: 0 }
-          - {label: "Link", name: "url", required: false, widget: "text", hint: only fill out for store and portfolio pages}
-          - { label: "Key", name: "key", widget: "hidden" }
-      - { label: "Body", name: "body", widget: "markdown", required: false }
-      - { label: "Permalink", name: "permalink", widget: "hidden" }
-  # Our Comic pages
-  - name: Comic Page
-    label: webcomic
-    folder: comics
-    create: true
-    slug: "{{slug}}"
-    fields:
-      - { label: Comic Page, name: comicPageUrl, widget: image }
-      - { label: 'Title', name: 'title', widget: 'string' }
-      - { label: 'Body', name: 'body', widget: 'markdown', required: false }
-      - { label: Comic Alt Text/Transcription, name: comicalt, widget: markdown, required: false, hint: This is useful text for people who are visually impaired to follow your comic. Check out this post for some tips on how to write accessible transcripts https://lastcallmedia.com/blog/accessible-comics }   
-      - { label: 'Publish Date', name: 'date', widget: 'datetime' }
-  # Our Cast Page
-  - name: Cast
-    label: cast
     files:
-      - file: pages/cast.md
-        label: Cast Page
-        name: castpage
+      - label: "About"
+          name: "about"
+          file: pages/about.md
+          fields:
+            - { label: "Title", name: "title", widget: "string" }
+            - { label: "Publish Date", name: "date", widget: "datetime" }
+            - label: "Navigation" # https://www.11ty.dev/docs/plugins/navigation/
+              name: "eleventyNavigation"
+              widget: "object"
+              fields:
+                - { label: "Order", name: "order", widget: "number", default: 0 }
+                - {label: "Link", name: "url", required: false, widget: "hidden", hint: only fill out for store and portfolio pages}
+                - { label: "Key", name: "key", widget: "hidden" }
+            - { label: "Body", name: "body", widget: "markdown", required: false }
+            - { label: "Permalink", name: "permalink", widget: "hidden" }
+      - label: "Archive"
+          name: "archive"
+          file: pages/archive.md
+          fields:
+            - { label: "Title", name: "title", widget: "string" }
+            - label: "Navigation" # https://www.11ty.dev/docs/plugins/navigation/
+              name: "eleventyNavigation"
+              widget: "object"
+              fields:
+                - { label: "Order", name: "order", widget: "number", default: 0 }
+                - {label: "Link", name: "url", required: false, widget: "hidden", hint: only fill out for store and portfolio pages}
+                - { label: "Key", name: "key", widget: "hidden" }
+            - { label: "Permalink", name: "permalink", widget: "hidden" }
+      - label: "Blog"
+        name: "blog"
+        file: pages/blog.md
         fields:
+          - { label: "Title", name: "title", widget: "string" }
+          - label: "Navigation" # https://www.11ty.dev/docs/plugins/navigation/
+            name: "eleventyNavigation"
+            widget: "object"
+            fields:
+              - { label: "Order", name: "order", widget: "number", default: 0 }
+              - {label: "Link", name: "url", required: false, widget: "hidden", hint: only fill out for store and portfolio pages}
+              - { label: "Key", name: "key", widget: "hidden" }
+          - { label: "Permalink", name: "permalink", widget: "hidden" }
+      - label: "Cast"
+        name: "cast"
+        file: pages/cast.md
+        fields:
+          - { label: "Title", name: "title", widget: "string" }
+          - label: "Navigation" # https://www.11ty.dev/docs/plugins/navigation/
+            name: "eleventyNavigation"
+            widget: "object"
+            fields:
+              - { label: "Order", name: "order", widget: "number", default: 0 }
+              - {label: "Link", name: "url", required: false, widget: "hidden", hint: only fill out for store and portfolio pages}
+              - { label: "Key", name: "key", widget: "hidden" }
+          - { label: "Permalink", name: "permalink", widget: "hidden" }
           - { label: Intro Text, name: body, widget: markdown, required: false }
           - label: Character
             name: characters
@@ -71,3 +94,77 @@ collections:
                   - {label: Alt Text, name: alt, widget: string, default: 'Image of Character'}
               - {label: Character Name, name: characterName, widget: string}
               - { label: Character Description, name: characterDescription, widget: markdown }
+      - label: "Home"
+        name: "home"
+        file: pages/home.md
+        fields:
+          - { label: "Title", name: "title", widget: "string" }
+          - label: "Navigation" # https://www.11ty.dev/docs/plugins/navigation/
+            name: "eleventyNavigation"
+            widget: "object"
+            fields:
+              - { label: "Order", name: "order", widget: "number", default: 0 }
+              - {label: "Link", name: "url", required: false, widget: "hidden", hint: only fill out for store and portfolio pages}
+              - { label: "Key", name: "key", widget: "hidden" }
+          - { label: "Permalink", name: "permalink", widget: "hidden" }
+      - label: "Links"
+          name: "links"
+          file: pages/links.md
+          fields:
+            - { label: "Title", name: "title", widget: "string" }
+            - { label: "Publish Date", name: "date", widget: "datetime" }
+            - label: "Navigation" # https://www.11ty.dev/docs/plugins/navigation/
+              name: "eleventyNavigation"
+              widget: "object"
+              fields:
+                - { label: "Order", name: "order", widget: "number", default: 0 }
+                - {label: "Link", name: "url", required: false, widget: "hidden", hint: only fill out for store and portfolio pages}
+                - { label: "Key", name: "key", widget: "hidden" }
+            - { label: "Body", name: "body", widget: "markdown", required: false }
+            - { label: "Permalink", name: "permalink", widget: "hidden" }
+      - label: "Store link"
+        name: "store"
+        file: pages/store.md
+        fields:
+          - label: "Navigation" # https://www.11ty.dev/docs/plugins/navigation/
+            name: "eleventyNavigation"
+            widget: "object"
+            fields:
+              - { label: "Order", name: "order", widget: "number", default: 0 }
+              - {label: "Link", name: "url", required: false, widget: "string", hint: only fill out for store and portfolio pages}
+              - { label: "Key", name: "key", widget: "hidden" }
+          - { label: "Permalink", name: "permalink", widget: "hidden" }
+      - label: "Portfolio link"
+        name: "website"
+        file: pages/Website.md
+        fields:
+          - label: "Navigation" # https://www.11ty.dev/docs/plugins/navigation/
+            name: "eleventyNavigation"
+            widget: "object"
+            fields:
+              - { label: "Order", name: "order", widget: "number", default: 0 }
+              - {label: "Link", name: "url", required: false, widget: "string", hint: only fill out for store and portfolio pages}
+              - { label: "Key", name: "key", widget: "hidden" }
+          - { label: "Permalink", name: "permalink", widget: "hidden" }
+
+  # Our Comic pages
+  - name: Comic Page
+    label: webcomic
+    folder: comics
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: Comic Page, name: comicPageUrl, widget: image }
+      - { label: 'Title', name: 'title', widget: 'string' }
+      - { label: 'Body', name: 'body', widget: 'markdown', required: false }
+      - { label: Comic Alt Text/Transcription, name: comicalt, widget: markdown, required: false, hint: This is useful text for people who are visually impaired to follow your comic. Check out this post for some tips on how to write accessible transcripts https://lastcallmedia.com/blog/accessible-comics }   
+      - { label: 'Publish Date', name: 'date', widget: 'datetime' }
+  # Our Cast Page
+  # - name: Cast
+  #   label: cast
+  #   files:
+  #     - file: pages/cast.md
+  #       label: Cast Page
+  #       name: castpage
+  #       fields:
+          
