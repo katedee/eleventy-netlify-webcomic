@@ -10,7 +10,7 @@ media_folder: "static/img" # Media files will be stored in the repo under images
 collections:
   # Our blog posts
   - name: "blog" # Used in routes, e.g., /admin/collections/blog
-    label: "Post" # Used in the UI
+    label: "Blog Posts" # Used in the UI
     folder: "posts" # The path to the folder where the documents are stored
     create: true # Allow users to create new documents in this collection
     slug: "{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
@@ -22,7 +22,7 @@ collections:
       - { label: "Publish Date", name: "date", widget: "datetime" }
   # Our pages e.g. About
   - name: "pages"
-    label: "Page"
+    label: "Pages"
     create: false # Change to true to allow editors to create new pages
     slug: "{{slug}}"
     files:
@@ -148,7 +148,7 @@ collections:
 
   # Our Comic pages
   - name: Comic Page
-    label: webcomic
+    label: Comic Pages
     folder: comics
     create: true
     slug: "{{slug}}"
@@ -158,12 +158,4 @@ collections:
       - { label: 'Body', name: 'body', widget: 'markdown', required: false }
       - { label: Comic Alt Text/Transcription, name: comicalt, widget: markdown, required: false, hint: This is useful text for people who are visually impaired to follow your comic. Check out this post for some tips on how to write accessible transcripts https://lastcallmedia.com/blog/accessible-comics }   
       - { label: 'Publish Date', name: 'date', widget: 'datetime' }
-  # Our Cast Page
-  # - name: Cast
-  #   label: cast
-  #   files:
-  #     - file: pages/cast.md
-  #       label: Cast Page
-  #       name: castpage
-  #       fields:
           
