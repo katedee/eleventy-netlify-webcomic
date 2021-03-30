@@ -1,30 +1,30 @@
 {
-  "title": "EXORCISM",
+  "title": "Webcomic Name",
   "author": {
-    "name": "Meaghan",
-    "email": "megacarter.mc@gmail.com"
+    "name": "Your name here",
+    "email": "youremailhere@gmail.com"
   },
   "feed": {
-    "subtitle": "get all your boos here.",
+    "subtitle": "place a tagline for your comics here.",
     "filename": "feed.xml",
     "path": "/feed/feed.xml",
     "id": "megawebcomic.netlify.app"
   },
   "social": {
     "Website": { 
-      "link": "www.megacarter.com",
+      "link": "",
       "icon": "/static/social-icons/website.svg"
     },
     "Twitter": { 
-      "link": "www.twitter.com/mega_carter",
+      "link": "",
       "icon": "/static/social-icons/social-1_round-twitter.svg"
       },
     "Instagram": { 
-      "link": "www.instagram.com/megacarter",
+      "link": "",
       "icon": "/static/social-icons/social-1_round-instagram.svg"
       },
     "Patreon": { 
-      "link": "www.patreon.com/megacarter",
+      "link": "",
       "icon": "/static/social-icons/icons8-patreon.svg"
       },
     "YouTube": { 
