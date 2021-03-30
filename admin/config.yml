@@ -28,33 +28,33 @@ collections:
     slug: "{{slug}}"
     files:
       - label: "About"
-          name: "about"
-          file: pages/about.md
-          fields:
-            - { label: "Title", name: "title", widget: "string" }
-            - { label: "Publish Date", name: "date", widget: "datetime" }
-            - label: "Navigation" # https://www.11ty.dev/docs/plugins/navigation/
-              name: "eleventyNavigation"
-              widget: "object"
-              fields:
-                - { label: "Order", name: "order", widget: "number", default: 0 }
-                - {label: "Link", name: "url", required: false, widget: "hidden", hint: only fill out for store and portfolio pages}
-                - { label: "Key", name: "key", widget: "hidden" }
-            - { label: "Body", name: "body", widget: "markdown", required: false }
-            - { label: "Permalink", name: "permalink", widget: "hidden" }
+        name: "about"
+        file: pages/about.md
+        fields:
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "Publish Date", name: "date", widget: "datetime" }
+          - label: "Navigation" # https://www.11ty.dev/docs/plugins/navigation/
+            name: "eleventyNavigation"
+            widget: "object"
+            fields:
+              - { label: "Order", name: "order", widget: "number", default: 0 }
+              - {label: "Link", name: "url", required: false, widget: "hidden", hint: only fill out for store and portfolio pages}
+              - { label: "Key", name: "key", widget: "hidden" }
+          - { label: "Body", name: "body", widget: "markdown", required: false }
+          - { label: "Permalink", name: "permalink", widget: "hidden" }
       - label: "Archive"
-          name: "archive"
-          file: pages/archive.md
-          fields:
-            - { label: "Title", name: "title", widget: "string" }
-            - label: "Navigation" # https://www.11ty.dev/docs/plugins/navigation/
-              name: "eleventyNavigation"
-              widget: "object"
-              fields:
-                - { label: "Order", name: "order", widget: "number", default: 0 }
-                - {label: "Link", name: "url", required: false, widget: "hidden", hint: only fill out for store and portfolio pages}
-                - { label: "Key", name: "key", widget: "hidden" }
-            - { label: "Permalink", name: "permalink", widget: "hidden" }
+        name: "archive"
+        file: pages/archive.md
+        fields:
+          - { label: "Title", name: "title", widget: "string" }
+          - label: "Navigation" # https://www.11ty.dev/docs/plugins/navigation/
+            name: "eleventyNavigation"
+            widget: "object"
+            fields:
+              - { label: "Order", name: "order", widget: "number", default: 0 }
+              - {label: "Link", name: "url", required: false, widget: "hidden", hint: only fill out for store and portfolio pages}
+              - { label: "Key", name: "key", widget: "hidden" }
+          - { label: "Permalink", name: "permalink", widget: "hidden" }
       - label: "Blog"
         name: "blog"
         file: pages/blog.md
@@ -108,20 +108,20 @@ collections:
               - { label: "Key", name: "key", widget: "hidden" }
           - { label: "Permalink", name: "permalink", widget: "hidden" }
       - label: "Links"
-          name: "links"
-          file: pages/links.md
-          fields:
-            - { label: "Title", name: "title", widget: "string" }
-            - { label: "Publish Date", name: "date", widget: "datetime" }
-            - label: "Navigation" # https://www.11ty.dev/docs/plugins/navigation/
-              name: "eleventyNavigation"
-              widget: "object"
-              fields:
-                - { label: "Order", name: "order", widget: "number", default: 0 }
-                - {label: "Link", name: "url", required: false, widget: "hidden", hint: only fill out for store and portfolio pages}
-                - { label: "Key", name: "key", widget: "hidden" }
-            - { label: "Body", name: "body", widget: "markdown", required: false }
-            - { label: "Permalink", name: "permalink", widget: "hidden" }
+        name: "links"
+        file: pages/links.md
+        fields:
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "Publish Date", name: "date", widget: "datetime" }
+          - label: "Navigation" # https://www.11ty.dev/docs/plugins/navigation/
+            name: "eleventyNavigation"
+            widget: "object"
+            fields:
+              - { label: "Order", name: "order", widget: "number", default: 0 }
+              - {label: "Link", name: "url", required: false, widget: "hidden", hint: only fill out for store and portfolio pages}
+              - { label: "Key", name: "key", widget: "hidden" }
+          - { label: "Body", name: "body", widget: "markdown", required: false }
+          - { label: "Permalink", name: "permalink", widget: "hidden" }
       - label: "Store link"
         name: "store"
         file: pages/store.md
