@@ -34,7 +34,7 @@ collections:
         widget: "object"
         fields:
           - { label: "Order", name: "order", widget: "number", default: 0 }
-          - {label: "Link", name: "url", widget: "text", hint: only fill out for store and portfolio pages}
+          - {label: "Link", name: "url", required: false, widget: "text", hint: only fill out for store and portfolio pages}
           - { label: "Key", name: "key", widget: "hidden" }
       - { label: "Body", name: "body", widget: "markdown", required: false }
       - { label: "Permalink", name: "permalink", widget: "hidden" }
