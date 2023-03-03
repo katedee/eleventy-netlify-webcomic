@@ -10,7 +10,7 @@ Use it as a starter for your own webcomic.
 
 Based on the [Eleventy Base Blog](https://github.com/11ty/eleventy-base-blog) repo.
 
-## [Demo Site](https://keen-newton-74c4ac.netlify.app/)
+## [Demo Site]([https://keen-newton-74c4ac.netlify.app/](https://eleventy-webcomic.netlify.app/)
 
 ## Instructions
 
