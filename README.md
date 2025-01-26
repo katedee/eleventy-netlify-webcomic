@@ -1,4 +1,5 @@
-# Webcomic Site Template (Instructions still on going)
+# Webcomic Site Template (Instructions still on going) -- UPDATE Jan, 25, 2025 - ARCHIVED
+This repo is now archived and I will not be maintaining it. Check out my other [webcomic](https://github.com/katedee/eleventy-webcomic)-focused [repos](https://github.com/katedee/rarebit-redux) if you're looking for a webcomic template.
 
 ## What is it?
 
